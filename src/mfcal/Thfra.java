@@ -23,8 +23,73 @@ public class Thfra extends javax.swing.JFrame {
      * Creates new form Thfra
      */
     
-    // CONSTRUCTOR WILL BE IMPLEMENTED
-
+   public Thfra(int day, int month,int year) throws FileNotFoundException, IOException {
+ 
+        
+        for(int i = 0 ; i < 24; ++i)
+            pasList[i] = "EMPTY";
+        
+         for(int i = 0 ; i < 24; ++i)
+            acList[i] = "EMPTY";
+        
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        
+        initComponents();
+      
+        jList2.setListData(pasList);
+        jList1.setListData(acList);
+        
+        jLabel1.setText("" + day + "/" + month + "/" + year + " ");
+        
+        FileReader fileReader = new FileReader(new File("passDats.txt"));
+        FileReader fileReader2 = new FileReader(new File("acDats.txt"));
+        
+        BufferedReader br = new BufferedReader(fileReader);
+        BufferedReader br2 = new BufferedReader(fileReader2);
+        
+        
+        String line = null;
+        
+        br.readLine();
+       
+        while ((line = br.readLine()) != null) // reading lines until the end of the file
+        {
+           
+            
+            String[] splitStr = MFCal.decode(line).split("È");
+            String[] secSplit = splitStr[0].split(":");
+            
+            String[] endSplit = secSplit[0].split("H");
+            
+            if(endSplit[0].equals(jLabel1.getText()))
+              pasList[Integer.parseInt(secSplit[1])] = "FULL";
+                   
+            
+        }
+        br.close();
+        
+        br2.readLine();
+        
+        while ((line = br2.readLine()) != null) // reading lines until the end of the file
+        {
+           
+            
+            String[] splitStr = MFCal.decode(line).split("È");
+            String[] secSplit = splitStr[0].split(":");
+            
+            String[] endSplit = secSplit[0].split("H");
+           
+            if(endSplit[0].equals(jLabel1.getText()))
+              acList[Integer.parseInt(secSplit[1])] = "FULL";
+            
+            
+        }
+        br2.close();
+        jList2.setListData(pasList);
+        jList1.setListData(acList);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
