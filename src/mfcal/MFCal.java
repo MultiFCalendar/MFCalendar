@@ -15,8 +15,32 @@ public class MFCal {
     /**
      * @param args the command line arguments
      */
-    
-    
-    //WILL BE IMPLEMENTED
+
+
+
+    public static void main(String[] args) throws IOException {
+        // TODO code application logic here
+        MFCal cal = new MFCal();
+        MyCalendar mcal = new MyCalendar();
+        Firfra x = new Firfra();
+        x.setLocationRelativeTo(null);
+        x.setVisible(true);
+
+        while (true) {
+            cal.doActive();
+
+        }
+
+    }
+
+    private static String ActiveOrPassive(String fileName){ // Get a string according to filename
+        String str = "";
+        if(fileName.equals("acDats.txt"))
+            str = "-----ActiveList-----\r\n";
+        else if(fileName.equals("passDats.txt"))
+            str = "-----PassiveList-----\r\n";
+
+        return str;
+    }
 
 }
