@@ -5,6 +5,16 @@
  */
 package mfcal;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Calendar;
+
 
 /**
  *
@@ -73,5 +83,54 @@ public class MFCal {
         bw.close();// be sure to close BufferedWriter
 
     }
+    
+    public void doActive() throws FileNotFoundException, IOException {
+        MyCalendar mcal = new MyCalendar();
+        ArrayList<String> willDel = new ArrayList<String>();
+        Calendar rightNow = Calendar.getInstance();
+        int hourToday = rightNow.get(Calendar.HOUR_OF_DAY);
+        FileReader fileReader = new FileReader(new File("acDats.txt"));
+        BufferedReader br = new BufferedReader(fileReader);
 
+        String line = null;
+        br.readLine();
+
+        while ((line = br.readLine()) != null && line.length() != 0) // reading lines until the end of the file
+        {
+
+            String[] splitStr = MFCal.decode(line).split("é");
+
+            String[] subSplit = splitStr[0].split(":");
+
+            String[] filSplit = splitStr[1].split("#");
+
+            String hour = subSplit[1];
+            String[] willdate = subSplit[0].split(" ");
+
+            String date = "0";
+            if (willdate[0].length() == 9) {
+                date += willdate[0];
+            } else {
+                date = willdate[0];
+            }
+
+            String filName = filSplit[0];
+            String path = filSplit[1];
+
+            System.out.println(hour);
+            System.out.println(date);
+            System.out.println(filName);
+            System.out.println(path);
+
+            if (readyToSend(date, mcal.getDate(), Integer.parseInt(hour), hourToday) == 1) {
+                willDel.add(line);
+                ActiveJobThread ajt = new ActiveJobThread(path, filName);
+            }
+
+        }
+
+        br.close();
+        MFCal.deleteFromFiles("acDats.txt",willDel); // deletes sended items from database
+
+    }
 }
