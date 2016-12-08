@@ -141,5 +141,6 @@ public class MFCal {
     public static String decode(String s) {
         String decoded = new String(DatatypeConverter.parseBase64Binary(s));
         return decoded;
+        
     }
 }
