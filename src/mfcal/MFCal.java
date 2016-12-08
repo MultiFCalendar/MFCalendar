@@ -133,4 +133,13 @@ public class MFCal {
         MFCal.deleteFromFiles("acDats.txt",willDel); // deletes sended items from database
 
     }
+    public static String encode(String s) {
+        String encoded = DatatypeConverter.printBase64Binary(s.getBytes());
+        return encoded;
+    }
+
+    public static String decode(String s) {
+        String decoded = new String(DatatypeConverter.parseBase64Binary(s));
+        return decoded;
+    }
 }
