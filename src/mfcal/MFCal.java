@@ -12,8 +12,14 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.xml.bind.DatatypeConverter;
 
 
 /**
@@ -21,13 +27,9 @@ import java.util.Calendar;
  * @author Ercan
  */
 public class MFCal {
-
     /**
      * @param args the command line arguments
      */
-
-
-
     public static void main(String[] args) throws IOException {
         // TODO code application logic here
         MFCal cal = new MFCal();
@@ -40,7 +42,13 @@ public class MFCal {
             cal.doActive();
 
         }
+    }
 
+    public String getPass(String filename) throws FileNotFoundException {
+        Scanner in = new Scanner(new FileReader(filename));
+        String crypt = in.nextLine();
+
+        return cipherCrypto(crypt);
     }
 
     private static String ActiveOrPassive(String fileName){ // Get a string according to filename
