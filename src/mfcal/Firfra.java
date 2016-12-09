@@ -5,9 +5,10 @@
  */
 package mfcal;
 
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.text.SimpleDateFormat;
 
 /**
  *
@@ -20,6 +21,33 @@ public class Firfra extends javax.swing.JFrame {
      */
     public Firfra() {
         initComponents();
+    }
+
+    public Firfra(int day, int month, int year, int hour) throws IOException {
+        initComponents();
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        this.hour = hour;
+        jLabel1.setText(day + "/" + month + "/" + year + " Hour :" + hour);
+
+        FileReader fileReader = new FileReader(new File("acDats.txt"));
+
+        BufferedReader br = new BufferedReader(fileReader);
+
+        String line = null;
+        br.readLine();
+
+         while ((line = br.readLine()) != null) // reading lines until the end of the file
+        {
+            String[] splitStr = MFCal.decode(line).split("é");
+            if (splitStr[0].equals(jLabel1.getText())) {
+                String [] secSplit = splitStr[1].split("#");
+                jTextField1.setText(secSplit[0]);
+                jTextField2.setText(secSplit[1]);
+            }
+        }
+        br.close();
     }
 
     /**
