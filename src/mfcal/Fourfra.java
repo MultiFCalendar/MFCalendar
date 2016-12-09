@@ -30,7 +30,30 @@ public class Fourfra extends javax.swing.JFrame {
      * Creates new form Fourfra
      */
    
-    // CONSTRUCTOR WILL BE IMPLEMENTED
+    public Fourfra(int day, int month, int year, int hour) throws FileNotFoundException, IOException {
+        initComponents();
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        this.hour = hour;
+        jLabel1.setText(day + "/" + month + "/" + year + " Hour :" + hour);
+
+        FileReader fileReader = new FileReader(new File("passDats.txt"));
+
+        BufferedReader br = new BufferedReader(fileReader);
+
+        String line = null;
+         br.readLine();
+        while ((line = br.readLine()) != null) // reading lines until the end of the file
+        {
+            String[] splitStr = MFCal.decode(line).split("é");
+            if (splitStr[0].equals(jLabel1.getText())) {
+                jTextArea1.setText(splitStr[1]);
+            }
+
+        }
+        br.close();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
