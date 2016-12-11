@@ -5,6 +5,7 @@
  */
 package mfcal;
 
+import java.awt.Color;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -22,9 +23,10 @@ public class Thfra extends javax.swing.JFrame {
     /**
      * Creates new form Thfra
      */
-    
-   public Thfra(int day, int month,int year) throws FileNotFoundException, IOException {
- 
+    public Thfra(int day, int month,int year) throws FileNotFoundException, IOException {
+       
+       
+        
         
         for(int i = 0 ; i < 24; ++i)
             pasList[i] = "EMPTY";
@@ -37,8 +39,8 @@ public class Thfra extends javax.swing.JFrame {
         this.year = year;
         
         initComponents();
-      
-        jList2.setListData(pasList);
+       
+       jList2.setListData(pasList);
         jList1.setListData(acList);
         
         jLabel1.setText("" + day + "/" + month + "/" + year + " ");
@@ -58,14 +60,94 @@ public class Thfra extends javax.swing.JFrame {
         {
            
             
-            String[] splitStr = MFCal.decode(line).split("È");
+            String[] splitStr = MFCal.decode(line).split("é");
             String[] secSplit = splitStr[0].split(":");
             
             String[] endSplit = secSplit[0].split("H");
             
-            if(endSplit[0].equals(jLabel1.getText()))
+            if(endSplit[0].equals(jLabel1.getText())){
               pasList[Integer.parseInt(secSplit[1])] = "FULL";
-                   
+                System.out.print(Integer.parseInt(secSplit[1]));
+               
+                switch (Integer.parseInt(secSplit[1])) {
+                    case 0:
+                        jButton1.setBackground(Color.red);
+                        break;
+                    case 1:
+                        jButton2.setBackground(Color.red);
+                        break;
+                    case 2:
+                        jButton3.setBackground(Color.red);
+                        break;
+                    case 3:
+                        jButton4.setBackground(Color.red);
+                        break;
+                    case 4:
+                        jButton5.setBackground(Color.red);
+                        break;
+                    case 5:
+                        jButton6.setBackground(Color.red);
+                        break;
+                    case 6:
+                        jButton7.setBackground(Color.red);
+                        break;
+                    case 7:
+                        jButton8.setBackground(Color.red);
+                        break;
+                    case 8:
+                        jButton9.setBackground(Color.red);
+                        break;
+                    case 9:
+                        jButton10.setBackground(Color.red);
+                        break;
+                    case 10:
+                        jButton11.setBackground(Color.red);
+                        break;
+                    case 11:
+                        jButton12.setBackground(Color.red);
+                        break;
+                    case 12:
+                        jButton13.setBackground(Color.red);
+                        break;
+                    case 13:
+                        jButton14.setBackground(Color.red);
+                        break;
+                    case 14:
+                        jButton15.setBackground(Color.red);
+                        break;
+                    case 15:
+                        jButton16.setBackground(Color.red);
+                        break;
+                    case 16:
+                        jButton17.setBackground(Color.red);
+                        break;
+                    case 17:
+                        jButton18.setBackground(Color.red);
+                        break;
+                    case 18:
+                        jButton19.setBackground(Color.red);
+                        break;
+                    case 19:
+                        jButton20.setBackground(Color.red);
+                        break;
+                    case 20:
+                        jButton21.setBackground(Color.red);
+                        break;
+                    case 21:
+                        jButton22.setBackground(Color.red);
+                        break;
+                    case 22:
+                        jButton23.setBackground(Color.red);
+                        break;
+                    case 23:
+                        jButton24.setBackground(Color.red);
+                        break;
+                    default:
+                        break;
+                }
+     
+                
+            }
             
         }
         br.close();
@@ -76,13 +158,93 @@ public class Thfra extends javax.swing.JFrame {
         {
            
             
-            String[] splitStr = MFCal.decode(line).split("È");
+            String[] splitStr = MFCal.decode(line).split("é");
             String[] secSplit = splitStr[0].split(":");
             
             String[] endSplit = secSplit[0].split("H");
            
-            if(endSplit[0].equals(jLabel1.getText()))
+            if(endSplit[0].equals(jLabel1.getText())){
               acList[Integer.parseInt(secSplit[1])] = "FULL";
+              
+              switch (Integer.parseInt(secSplit[1])) {
+                    case 0:
+                        jButton91.setBackground(Color.red);
+                        break;
+                    case 1:
+                        jButton77.setBackground(Color.red);
+                        break;
+                    case 2:
+                        jButton90.setBackground(Color.red);
+                        break;
+                    case 3:
+                        jButton84.setBackground(Color.red);
+                        break;
+                    case 4:
+                        jButton83.setBackground(Color.red);
+                        break;
+                    case 5:
+                        jButton82.setBackground(Color.red);
+                        break;
+                    case 6:
+                        jButton96.setBackground(Color.red);
+                        break;
+                    case 7:
+                        jButton74.setBackground(Color.red);
+                        break;
+                    case 8:
+                        jButton78.setBackground(Color.red);
+                        break;
+                    case 9:
+                        jButton89.setBackground(Color.red);
+                        break;
+                    case 10:
+                        jButton94.setBackground(Color.red);
+                        break;
+                    case 11:
+                        jButton73.setBackground(Color.red);
+                        break;
+                    case 12:
+                        jButton75.setBackground(Color.red);
+                        break;
+                    case 13:
+                        jButton87.setBackground(Color.red);
+                        break;
+                    case 14:
+                        jButton86.setBackground(Color.red);
+                        break;
+                    case 15:
+                        jButton79.setBackground(Color.red);
+                        break;
+                    case 16:
+                        jButton88.setBackground(Color.red);
+                        break;
+                    case 17:
+                        jButton93.setBackground(Color.red);
+                        break;
+                    case 18:
+                        jButton92.setBackground(Color.red);
+                        break;
+                    case 19:
+                        jButton81.setBackground(Color.red);
+                        break;
+                    case 20:
+                        jButton85.setBackground(Color.red);
+                        break;
+                    case 21:
+                        jButton76.setBackground(Color.red);
+                        break;
+                    case 22:
+                        jButton95.setBackground(Color.red);
+                        break;
+                    case 23:
+                        jButton80.setBackground(Color.red);
+                        break;
+                    default:
+                        break;
+                }
+              
+            }
+               
             
             
         }
@@ -90,13 +252,14 @@ public class Thfra extends javax.swing.JFrame {
         jList2.setListData(pasList);
         jList1.setListData(acList);
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
      * regenerated by the Form Editor.
      */
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -374,144 +537,182 @@ public class Thfra extends javax.swing.JFrame {
                 jButton12ActionPerformed(evt);
             }
         });
+        jButton12.setBackground(Color.GREEN);
 
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
             }
         });
+        jButton8.setBackground(Color.GREEN);
 
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton13ActionPerformed(evt);
             }
         });
+        jButton13.setBackground(Color.GREEN);
 
         jButton22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton22ActionPerformed(evt);
             }
         });
+        jButton22.setBackground(Color.GREEN);
 
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
+        if(pasList[1].equals("EMPTY")){
+            jButton2.setBackground(Color.GREEN);
+            System.out.printf("deneme1\n");
+        }
+        else if (pasList[1].equals("FULL") ){
+            jButton2.setBackground(Color.RED);
+            System.out.printf("deneme2\n");
+        }
 
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
             }
         });
+        jButton9.setBackground(Color.GREEN);
 
         jButton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton16ActionPerformed(evt);
             }
         });
+        jButton16.setBackground(Color.GREEN);
 
         jButton24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton24ActionPerformed(evt);
             }
         });
+        jButton24.setBackground(Color.GREEN);
 
         jButton20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton20ActionPerformed(evt);
             }
         });
+        jButton20.setBackground(Color.GREEN);
 
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
+        jButton6.setBackground(Color.GREEN);
 
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
+        jButton5.setBackground(Color.GREEN);
 
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
+        jButton4.setBackground(Color.GREEN);
 
         jButton21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton21ActionPerformed(evt);
             }
         });
+        jButton21.setBackground(Color.GREEN);
 
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton15ActionPerformed(evt);
             }
         });
+        jButton15.setBackground(Color.GREEN);
 
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton14ActionPerformed(evt);
             }
         });
+        jButton14.setBackground(Color.GREEN);
 
         jButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton17ActionPerformed(evt);
             }
         });
+        jButton17.setBackground(Color.GREEN);
 
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton10ActionPerformed(evt);
             }
         });
+        jButton10.setBackground(Color.GREEN);
 
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
+        jButton3.setBackground(Color.GREEN);
 
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        if(pasList[0].equals("EMPTY")){
+            jButton1.setBackground(Color.GREEN);
+            System.out.printf("deneme1\n");
+        }
+        else if (pasList[0].equals("FULL") ){
+            jButton1.setBackground(Color.RED);
+            System.out.printf("deneme2\n");
+        }
 
         jButton19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton19ActionPerformed(evt);
             }
         });
+        jButton19.setBackground(Color.GREEN);
 
         jButton18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton18ActionPerformed(evt);
             }
         });
+        jButton18.setBackground(Color.GREEN);
 
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton11ActionPerformed(evt);
             }
         });
+        jButton11.setBackground(Color.GREEN);
 
         jButton23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton23ActionPerformed(evt);
             }
         });
+        jButton23.setBackground(Color.GREEN);
 
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
+        jButton7.setBackground(Color.GREEN);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -596,144 +797,168 @@ public class Thfra extends javax.swing.JFrame {
                 .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        jButton73.setBackground(Color.GREEN);
         jButton73.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton73ActionPerformed(evt);
             }
         });
 
+        jButton74.setBackground(Color.GREEN);
         jButton74.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton74ActionPerformed(evt);
             }
         });
 
+        jButton75.setBackground(Color.GREEN);
         jButton75.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton75ActionPerformed(evt);
             }
         });
 
+        jButton76.setBackground(Color.GREEN);
         jButton76.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton76ActionPerformed(evt);
             }
         });
 
+        jButton77.setBackground(Color.GREEN);
         jButton77.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton77ActionPerformed(evt);
             }
         });
 
+        jButton78.setBackground(Color.GREEN);
         jButton78.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton78ActionPerformed(evt);
             }
         });
 
+        jButton79.setBackground(Color.GREEN);
         jButton79.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton79ActionPerformed(evt);
             }
         });
 
+        jButton80.setBackground(Color.GREEN);
         jButton80.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton80ActionPerformed(evt);
             }
         });
 
+        jButton81.setBackground(Color.GREEN);
         jButton81.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton81ActionPerformed(evt);
             }
         });
 
+        jButton82.setBackground(Color.GREEN);
         jButton82.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton82ActionPerformed(evt);
             }
         });
 
+        jButton83.setBackground(Color.GREEN);
         jButton83.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton83ActionPerformed(evt);
             }
         });
 
+        jButton84.setBackground(Color.GREEN);
         jButton84.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton84ActionPerformed(evt);
             }
         });
 
+        jButton85.setBackground(Color.GREEN);
         jButton85.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton85ActionPerformed(evt);
             }
         });
 
+        jButton86.setBackground(Color.GREEN);
         jButton86.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton86ActionPerformed(evt);
             }
         });
 
+        jButton87.setBackground(Color.GREEN);
         jButton87.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton87ActionPerformed(evt);
             }
         });
 
+        jButton88.setBackground(Color.GREEN);
         jButton88.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton88ActionPerformed(evt);
             }
         });
 
+        jButton89.setBackground(Color.GREEN);
         jButton89.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton89ActionPerformed(evt);
             }
         });
 
+        jButton90.setBackground(Color.GREEN);
         jButton90.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton90ActionPerformed(evt);
             }
         });
 
+        jButton91.setBackground(Color.GREEN);
         jButton91.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton91ActionPerformed(evt);
             }
         });
 
+        jButton92.setBackground(Color.GREEN);
         jButton92.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton92ActionPerformed(evt);
             }
         });
 
+        jButton93.setBackground(Color.GREEN);
         jButton93.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton93ActionPerformed(evt);
             }
         });
 
+        jButton94.setBackground(Color.GREEN);
         jButton94.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton94ActionPerformed(evt);
             }
         });
 
+        jButton95.setBackground(Color.GREEN);
         jButton95.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton95ActionPerformed(evt);
             }
         });
 
+        jButton96.setBackground(Color.GREEN);
         jButton96.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton96ActionPerformed(evt);
@@ -888,9 +1113,9 @@ public class Thfra extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {                                          
        Fourfra x = null;
         try {
             x = new Fourfra(day, month, year,17);
@@ -900,9 +1125,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton18ActionPerformed
+    }                                         
 
-    private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
+    private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         Fourfra x=null;
         try {
             x = new Fourfra(day, month, year,22);
@@ -912,9 +1137,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton23ActionPerformed
+    }                                         
 
-    private void jButton93ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton93ActionPerformed
+    private void jButton93ActionPerformed(java.awt.event.ActionEvent evt) {                                          
        Fiffra x = null;
         try {
             x = new Fiffra(day, month, year,17);
@@ -924,9 +1149,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton93ActionPerformed
+    }                                         
 
-    private void jButton95ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton95ActionPerformed
+    private void jButton95ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         Fiffra x = null;
         try {
             x = new Fiffra(day, month, year,22);
@@ -936,9 +1161,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton95ActionPerformed
+    }                                         
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         Fourfra x = null;
         try {
             x = new Fourfra(day, month, year,0);
@@ -948,9 +1173,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }                                        
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
        Fourfra x=null;
         try {
             x = new Fourfra(day, month, year,1);
@@ -960,9 +1185,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }                                        
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         Fourfra x = null;
         try {
             x = new Fourfra(day, month, year,2);
@@ -972,9 +1197,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }                                        
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         Fourfra x=null;
         try {
             x = new Fourfra(day, month, year,3);
@@ -984,9 +1209,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }                                        
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {                                         
        Fourfra x = null;
         try {
             x = new Fourfra(day, month, year,4);
@@ -996,9 +1221,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }                                        
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         Fourfra x = null;
         try {
             x = new Fourfra(day, month, year,5);
@@ -1008,9 +1233,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }                                        
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {                                         
        Fourfra x = null;
         try {
             x = new Fourfra(day, month, year,6);
@@ -1020,9 +1245,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }                                        
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {                                         
       Fourfra x = null;
         try {
             x = new Fourfra(day, month, year,7);
@@ -1032,9 +1257,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }                                        
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {                                         
        Fourfra x = null;
         try {
             x = new Fourfra(day, month, year,8);
@@ -1044,9 +1269,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton9ActionPerformed
+    }                                        
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {                                          
       Fourfra x = null;
         try {
             x = new Fourfra(day, month, year,9);
@@ -1056,9 +1281,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton10ActionPerformed
+    }                                         
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {                                          
       Fourfra x = null;
         try {
             x = new Fourfra(day, month, year,10);
@@ -1068,9 +1293,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton11ActionPerformed
+    }                                         
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {                                          
      Fourfra x = null;
         try {
             x = new Fourfra(day, month, year,11);
@@ -1080,9 +1305,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton12ActionPerformed
+    }                                         
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         Fourfra x = null;
         try {
             x = new Fourfra(day, month, year,12);
@@ -1092,9 +1317,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton13ActionPerformed
+    }                                         
 
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {                                          
       Fourfra x = null;
         try {
             x = new Fourfra(day, month, year,13);
@@ -1104,9 +1329,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton14ActionPerformed
+    }                                         
 
-    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         Fourfra x = null;
         try {
             x = new Fourfra(day, month, year,14);
@@ -1116,9 +1341,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton15ActionPerformed
+    }                                         
 
-    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {                                          
        Fourfra x = null;
         try {
             x = new Fourfra(day, month, year,15);
@@ -1128,9 +1353,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton16ActionPerformed
+    }                                         
 
-    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {                                          
        Fourfra x = null;
         try {
             x = new Fourfra(day, month, year,16);
@@ -1140,9 +1365,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton17ActionPerformed
+    }                                         
 
-    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {                                          
        Fourfra x = null;
         try {
             x = new Fourfra(day, month, year,18);
@@ -1152,9 +1377,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton19ActionPerformed
+    }                                         
 
-    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {                                          
        Fourfra x = null;
         try {
             x = new Fourfra(day, month, year,19);
@@ -1164,9 +1389,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton20ActionPerformed
+    }                                         
 
-    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         Fourfra x = null;
         try {
             x = new Fourfra(day, month, year,20);
@@ -1176,9 +1401,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton21ActionPerformed
+    }                                         
 
-    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         Fourfra x = null;
         try {
             x = new Fourfra(day, month, year,21);
@@ -1188,9 +1413,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton22ActionPerformed
+    }                                         
 
-    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
+    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         Fourfra x = null;
         try {
             x = new Fourfra(day, month, year,23);
@@ -1200,17 +1425,17 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton24ActionPerformed
+    }                                         
 
-    private void jButton97ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton97ActionPerformed
+    private void jButton97ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         Secfra x = new Secfra(this.month,this.year);
                 
                 x.setLocation(this.getLocation());
                 x.setVisible(true);
                 this.dispose();
-    }//GEN-LAST:event_jButton97ActionPerformed
+    }                                         
 
-    private void jButton91ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton91ActionPerformed
+    private void jButton91ActionPerformed(java.awt.event.ActionEvent evt) {                                          
        Fiffra x = null;
         try {
             x = new Fiffra(day, month, year,0);
@@ -1220,9 +1445,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton91ActionPerformed
+    }                                         
 
-    private void jButton77ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton77ActionPerformed
+    private void jButton77ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         Fiffra x = null;
         try {
             x = new Fiffra(day, month, year,1);
@@ -1232,9 +1457,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton77ActionPerformed
+    }                                         
 
-    private void jButton90ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton90ActionPerformed
+    private void jButton90ActionPerformed(java.awt.event.ActionEvent evt) {                                          
       Fiffra x = null;
         try {
             x = new Fiffra(day, month, year,2);
@@ -1244,9 +1469,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton90ActionPerformed
+    }                                         
 
-    private void jButton84ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton84ActionPerformed
+    private void jButton84ActionPerformed(java.awt.event.ActionEvent evt) {                                          
        Fiffra x = null;
         try {
             x = new Fiffra(day, month, year,3);
@@ -1256,9 +1481,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton84ActionPerformed
+    }                                         
 
-    private void jButton83ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton83ActionPerformed
+    private void jButton83ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         Fiffra x = null;
         try {
             x = new Fiffra(day, month, year,4);
@@ -1268,9 +1493,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton83ActionPerformed
+    }                                         
 
-    private void jButton82ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton82ActionPerformed
+    private void jButton82ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         Fiffra x = null;
         try {
             x = new Fiffra(day, month, year,5);
@@ -1280,9 +1505,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton82ActionPerformed
+    }                                         
 
-    private void jButton96ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton96ActionPerformed
+    private void jButton96ActionPerformed(java.awt.event.ActionEvent evt) {                                          
        Fiffra x = null;
         try {
             x = new Fiffra(day, month, year,6);
@@ -1292,9 +1517,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton96ActionPerformed
+    }                                         
 
-    private void jButton74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton74ActionPerformed
+    private void jButton74ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         Fiffra x = null;
         try {
             x = new Fiffra(day, month, year,7);
@@ -1304,9 +1529,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton74ActionPerformed
+    }                                         
 
-    private void jButton78ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton78ActionPerformed
+    private void jButton78ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         Fiffra x = null;
         try {
             x = new Fiffra(day, month, year,8);
@@ -1316,9 +1541,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton78ActionPerformed
+    }                                         
 
-    private void jButton89ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton89ActionPerformed
+    private void jButton89ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         Fiffra x = null;
         try {
             x = new Fiffra(day, month, year,9);
@@ -1328,9 +1553,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton89ActionPerformed
+    }                                         
 
-    private void jButton94ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton94ActionPerformed
+    private void jButton94ActionPerformed(java.awt.event.ActionEvent evt) {                                          
        Fiffra x = null;
         try {
             x = new Fiffra(day, month, year,10);
@@ -1340,9 +1565,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton94ActionPerformed
+    }                                         
 
-    private void jButton73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton73ActionPerformed
+    private void jButton73ActionPerformed(java.awt.event.ActionEvent evt) {                                          
       Fiffra x = null;
         try {
             x = new Fiffra(day, month, year,11);
@@ -1352,9 +1577,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton73ActionPerformed
+    }                                         
 
-    private void jButton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton75ActionPerformed
+    private void jButton75ActionPerformed(java.awt.event.ActionEvent evt) {                                          
        Fiffra x = null;
         try {
             x = new Fiffra(day, month, year,12);
@@ -1364,9 +1589,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton75ActionPerformed
+    }                                         
 
-    private void jButton87ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton87ActionPerformed
+    private void jButton87ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         Fiffra x = null;
         try {
             x = new Fiffra(day, month, year,13);
@@ -1376,9 +1601,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton87ActionPerformed
+    }                                         
 
-    private void jButton86ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton86ActionPerformed
+    private void jButton86ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         Fiffra x = null;
         try {
             x = new Fiffra(day, month, year,14);
@@ -1388,9 +1613,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton86ActionPerformed
+    }                                         
 
-    private void jButton79ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton79ActionPerformed
+    private void jButton79ActionPerformed(java.awt.event.ActionEvent evt) {                                          
        Fiffra x = null;
         try {
             x = new Fiffra(day, month, year,15);
@@ -1400,9 +1625,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton79ActionPerformed
+    }                                         
 
-    private void jButton88ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton88ActionPerformed
+    private void jButton88ActionPerformed(java.awt.event.ActionEvent evt) {                                          
        Fiffra x = null;
         try {
             x = new Fiffra(day, month, year,16);
@@ -1412,9 +1637,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton88ActionPerformed
+    }                                         
 
-    private void jButton92ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton92ActionPerformed
+    private void jButton92ActionPerformed(java.awt.event.ActionEvent evt) {                                          
        Fiffra x = null;
         try {
             x = new Fiffra(day, month, year,18);
@@ -1424,9 +1649,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton92ActionPerformed
+    }                                         
 
-    private void jButton81ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton81ActionPerformed
+    private void jButton81ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         Fiffra x = null;
         try {
             x = new Fiffra(day, month, year,19);
@@ -1436,9 +1661,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton81ActionPerformed
+    }                                         
 
-    private void jButton85ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton85ActionPerformed
+    private void jButton85ActionPerformed(java.awt.event.ActionEvent evt) {                                          
        Fiffra x = null;
         try {
             x = new Fiffra(day, month, year,20);
@@ -1448,9 +1673,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton85ActionPerformed
+    }                                         
 
-    private void jButton76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton76ActionPerformed
+    private void jButton76ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         Fiffra x = null;
         try {
             x = new Fiffra(day, month, year,21);
@@ -1460,9 +1685,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton76ActionPerformed
+    }                                         
 
-    private void jButton80ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton80ActionPerformed
+    private void jButton80ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         Fiffra x = null;
         try {
             x = new Fiffra(day, month, year,23);
@@ -1472,9 +1697,9 @@ public class Thfra extends javax.swing.JFrame {
             x.setLocation(this.getLocation());
             x.setVisible(true);
             this.dispose();
-    }//GEN-LAST:event_jButton80ActionPerformed
+    }                                         
   
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -1558,7 +1783,7 @@ public class Thfra extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
     private int day;
     private int month;
     private int year;
