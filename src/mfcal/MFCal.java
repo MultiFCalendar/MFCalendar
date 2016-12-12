@@ -43,6 +43,17 @@ public class MFCal {
 
         }
     }
+    
+    public static String encode(String s) {
+        String encoded = DatatypeConverter.printBase64Binary(s.getBytes());
+        return encoded;
+    }
+
+    public static String decode(String s) {
+        String decoded = new String(DatatypeConverter.parseBase64Binary(s));
+        return decoded;
+    }
+
 
     public String getPass(String filename) throws FileNotFoundException {
         Scanner in = new Scanner(new FileReader(filename));
