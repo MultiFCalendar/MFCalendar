@@ -12,13 +12,12 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.xml.bind.DatatypeConverter;
 
 
@@ -42,6 +41,21 @@ public class MFCal {
             cal.doActive();
 
         }
+    }
+    
+    public int readyToSend(String date1, String date2, int hour1, int hour2) {
+        String[] firDat = date1.split("/");
+        String[] secDat = date2.split("/");
+
+        if (Integer.parseInt(firDat[2]) < Integer.parseInt(secDat[2]) || (Integer.parseInt(firDat[2]) == Integer.parseInt(secDat[2]) && Integer.parseInt(firDat[1]) < Integer.parseInt(secDat[1]))
+                || (Integer.parseInt(firDat[2]) == Integer.parseInt(secDat[2]) && Integer.parseInt(firDat[1]) == Integer.parseInt(secDat[1]) && Integer.parseInt(firDat[0]) < Integer.parseInt(secDat[0]))) {
+            return 1;
+        } else if (date1.equals(date2) && hour1 <= hour2) {
+            return 1;
+        } else {
+            return 0;
+        }
+
     }
     
     public static String encode(String s) {
@@ -152,14 +166,33 @@ public class MFCal {
         MFCal.deleteFromFiles("acDats.txt",willDel); // deletes sended items from database
 
     }
-    public static String encode(String s) {
-        String encoded = DatatypeConverter.printBase64Binary(s.getBytes());
-        return encoded;
+    
+
+    public static int getCurrentMonth() {
+        DateFormat dateFormat = new SimpleDateFormat("MM");
+        Date date = new Date();
+        return Integer.parseInt(dateFormat.format(date));
     }
 
-    public static String decode(String s) {
-        String decoded = new String(DatatypeConverter.parseBase64Binary(s));
-        return decoded;
-        
+    public static int getCurrentYear() {
+        DateFormat dateFormat = new SimpleDateFormat("yyyy");
+        Date date = new Date();
+        return Integer.parseInt(dateFormat.format(date));
     }
+
+    public static int getCurrentDay() {
+        DateFormat dateFormat = new SimpleDateFormat("dd");
+        Date date = new Date();
+        return Integer.parseInt(dateFormat.format(date));
+    }
+
+    private String cipherCrypto(String crypted) {
+        String decrypt = "";
+        for (int i = 0; i < crypted.length(); ++i) {
+            decrypt += (char) (crypted.charAt(i) - 1);
+        }
+        return decrypt;
+
+    }
+
 }
