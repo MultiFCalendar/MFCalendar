@@ -12,6 +12,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -31,15 +32,20 @@ public class MFCal {
      */
     public static void main(String[] args) throws IOException {
         // TODO code application logic here
-        MFCal cal = new MFCal();
-        MyCalendar mcal = new MyCalendar();
-        Firfra x = new Firfra();
-        x.setLocationRelativeTo(null);
-        x.setVisible(true);
+        try{
+        
+            MFCal cal = new MFCal();
+            MyCalendar mcal = new MyCalendar();
+            Firfra x = new Firfra();
+            x.setLocationRelativeTo(null);
+            x.setVisible(true);
+            
+            while (true) {
+                cal.doActive();
 
-        while (true) {
-            cal.doActive();
-
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
         }
     }
     
@@ -117,7 +123,7 @@ public class MFCal {
 
     }
     
-    public void doActive() throws FileNotFoundException, IOException {
+    public void doActive() throws FileNotFoundException, IOException, URISyntaxException {
         MyCalendar mcal = new MyCalendar();
         ArrayList<String> willDel = new ArrayList<String>();
         Calendar rightNow = Calendar.getInstance();
@@ -157,7 +163,8 @@ public class MFCal {
 
             if (readyToSend(date, mcal.getDate(), Integer.parseInt(hour), hourToday) == 1) {
                 willDel.add(line);
-                ActiveJobThread ajt = new ActiveJobThread(path, filName);
+                FtpClient ftpClient = new FtpClient(path, filName);
+                ActiveJobsThread ajt = new ActiveJobsThread(ftpClient);
             }
 
         }
