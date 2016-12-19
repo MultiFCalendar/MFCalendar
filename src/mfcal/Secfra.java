@@ -39,6 +39,12 @@ public class Secfra extends javax.swing.JFrame {
         this.month = month;
         this.year = year;
 
+        try{
+         holidays=OfficialHolidays.getHolidays(year);
+        }catch(Throwable t){
+            System.exit(1);
+        }
+        
         monthsOfYear[0] = "OCAK";
         monthsOfYear[1] = "ŞUBAT";
         monthsOfYear[2] = "MART";
@@ -97,8 +103,17 @@ public class Secfra extends javax.swing.JFrame {
         buttons[startBut].setText(fir.toString());
 
         for (int i = startBut + 1; i < Integer.parseInt(str[0]) + startBut; ++i) {
+            
+            var=false;
             ++fir;
             buttons[i].setText(fir.toString());
+            for(int z=0;z<holidays.size();++z)
+            {
+                if(holidays.get(z).getDay()==Integer.parseInt(fir.toString()) && holidays.get(z).getMonth()== month && holidays.get(z).getYear()==year)
+                    var=true;
+            }
+            if(var==true)
+                buttons[i].setBackground(Color.yellow);
         }
 
         jLabel8.setText("Bugün :   " + MFCal.getCurrentDay() + " " + monthsOfYear[MFCal.getCurrentMonth() - 1] + " " + MFCal.getCurrentYear());
