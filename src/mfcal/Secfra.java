@@ -5,9 +5,11 @@
  */
 package mfcal;
 
+import java.awt.Color;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -35,7 +37,7 @@ public class Secfra extends javax.swing.JFrame {
         this.buttons = new javax.swing.JButton[37];
 
         MyCalendar mcal = new MyCalendar();
-
+        ArrayList<MyDate> holidays=null;
         this.month = month;
         this.year = year;
 
@@ -101,7 +103,7 @@ public class Secfra extends javax.swing.JFrame {
         
         Integer fir = 1;
         buttons[startBut].setText(fir.toString());
-
+        boolean var;
         for (int i = startBut + 1; i < Integer.parseInt(str[0]) + startBut; ++i) {
             
             var=false;
