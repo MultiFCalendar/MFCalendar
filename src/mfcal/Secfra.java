@@ -119,16 +119,23 @@ public class Secfra extends javax.swing.JFrame {
             buttons[i].setText(fir.toString());
          
             if(holidays!=null){
-            for(int z=0;z<holidays.size();++z)
-            {
-                if(holidays.get(z).getDay()==Integer.parseInt(fir.toString()) && holidays.get(z).getMonth()== month && holidays.get(z).getYear()==year)
-                    var=true;
-            }
+                for(int z=0;z<holidays.size();++z)
+                {
+                    if(holidays.get(z).getDay()==Integer.parseInt(fir.toString()) && holidays.get(z).getMonth()== month && holidays.get(z).getYear()==year)
+                        var=true;
+                }
             }
             if(var==true)
                 buttons[i].setBackground(Color.yellow);
             if(month == 1)
                 buttons[startBut].setBackground(Color.yellow);
+        }
+        
+        for (int i = startBut; i < Integer.parseInt(str[0]) + startBut; ++i) {
+            Date aDate = new Date(year, month, Integer.parseInt(buttons[i].getText()));
+            if(aDate.compareTo(new Date(MFCal.getCurrentYear(), MFCal.getCurrentMonth(), MFCal.getCurrentDay())) < 0) {
+                buttons[i].setBackground(Color.GRAY);
+            }
         }
         
         for(int z=0;z<buttons.length;++z){
@@ -655,7 +662,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton36ActionPerformed
         String tex = jButton36.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton36.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -678,7 +685,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton42ActionPerformed
         String tex = jButton42.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton42.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -693,7 +700,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton49ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton49ActionPerformed
         String tex = jButton49.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton49.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -708,7 +715,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton44ActionPerformed
         String tex = jButton44.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton44.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -723,7 +730,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton71ActionPerformed
         String tex = jButton71.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton71.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -738,7 +745,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37ActionPerformed
         String tex = jButton37.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton37.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -753,7 +760,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38ActionPerformed
         String tex = jButton38.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton38.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -768,7 +775,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton39ActionPerformed
         String tex = jButton39.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton39.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -783,7 +790,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton40ActionPerformed
         String tex = jButton40.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton40.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -798,7 +805,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton41ActionPerformed
         String tex = jButton41.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton41.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -813,7 +820,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton43ActionPerformed
         String tex = jButton43.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton43.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -828,7 +835,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton45ActionPerformed
         String tex = jButton45.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton45.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -843,7 +850,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton46ActionPerformed
         String tex = jButton46.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton46.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -858,7 +865,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton47ActionPerformed
         String tex = jButton47.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton47.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -873,7 +880,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton48ActionPerformed
         String tex = jButton48.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton48.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -888,7 +895,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton50ActionPerformed
         String tex = jButton50.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton50.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -903,7 +910,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton51ActionPerformed
         String tex = jButton51.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton51.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -918,7 +925,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton52ActionPerformed
         String tex = jButton52.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton52.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -933,7 +940,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton53ActionPerformed
         String tex = jButton53.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton53.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -948,7 +955,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton54ActionPerformed
         String tex = jButton54.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton54.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -963,7 +970,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton55ActionPerformed
         String tex = jButton55.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton55.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -978,7 +985,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton56ActionPerformed
         String tex = jButton56.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton56.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -993,7 +1000,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton57ActionPerformed
         String tex = jButton57.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton57.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -1008,7 +1015,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton58ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton58ActionPerformed
         String tex = jButton58.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton58.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -1023,7 +1030,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton59ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton59ActionPerformed
         String tex = jButton59.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton59.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -1038,7 +1045,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton60ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton60ActionPerformed
         String tex = jButton60.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton60.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -1053,7 +1060,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton61ActionPerformed
         String tex = jButton61.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton61.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -1068,7 +1075,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton62ActionPerformed
         String tex = jButton62.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton62.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -1083,7 +1090,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton63ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton63ActionPerformed
         String tex = jButton63.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton63.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -1098,7 +1105,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton64ActionPerformed
         String tex = jButton64.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton64.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -1113,7 +1120,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton65ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton65ActionPerformed
         String tex = jButton65.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton65.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -1128,7 +1135,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton66ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton66ActionPerformed
         String tex = jButton66.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton66.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -1143,7 +1150,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton67ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton67ActionPerformed
         String tex = jButton67.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton67.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -1158,7 +1165,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton68ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton68ActionPerformed
         String tex = jButton68.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton68.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -1173,7 +1180,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton69ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton69ActionPerformed
         String tex = jButton69.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton69.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -1188,7 +1195,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton70ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton70ActionPerformed
         String tex = jButton70.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton70.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);
@@ -1203,7 +1210,7 @@ public class Secfra extends javax.swing.JFrame {
 
     private void jButton72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton72ActionPerformed
         String tex = jButton72.getText();
-        if (!tex.equals("")) {
+        if (!tex.equals("") && !jButton72.getBackground().equals(Color.GRAY)) {
             Thfra x = null;
             try {
                 x = new Thfra(Integer.parseInt(tex), month, year);

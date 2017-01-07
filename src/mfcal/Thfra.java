@@ -1292,7 +1292,9 @@ public class Thfra extends javax.swing.JFrame {
         pack();
     }// </editor-fold>                        
 
-    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {                                          
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {  
+        
+        
        Fourfra x = null;
         try {
             x = new Fourfra(day, month, year,17);
