@@ -66,7 +66,7 @@ public class Thfra extends javax.swing.JFrame {
             
             if(endSplit[0].equals(jLabel1.getText())){
               pasList[Integer.parseInt(secSplit[1])] = "FULL";
-                System.out.print(Integer.parseInt(secSplit[1]));
+               // System.out.print(Integer.parseInt(secSplit[1]));
                
                 switch (Integer.parseInt(secSplit[1])) {
                     case 0:
@@ -446,11 +446,11 @@ public class Thfra extends javax.swing.JFrame {
         });
         if(pasList[0].equals("EMPTY")){
             jButton1.setBackground(Color.GREEN);
-            System.out.printf("deneme1\n");
+            
         }
         else if (pasList[0].equals("FULL") ){
             jButton1.setBackground(Color.RED);
-            System.out.printf("deneme2\n");
+           
         }
 
         jButton20.addActionListener(new java.awt.event.ActionListener() {
@@ -572,11 +572,11 @@ public class Thfra extends javax.swing.JFrame {
         });
         if(pasList[1].equals("EMPTY")){
             jButton2.setBackground(Color.GREEN);
-            System.out.printf("deneme1\n");
+            
         }
         else if (pasList[1].equals("FULL") ){
             jButton2.setBackground(Color.RED);
-            System.out.printf("deneme2\n");
+           
         }
 
         jButton17.addActionListener(new java.awt.event.ActionListener() {

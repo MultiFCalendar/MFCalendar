@@ -178,7 +178,7 @@ public class Fourfra extends javax.swing.JFrame {
         
         willSend = MFCal.encode(firTex) + "\r\n";
 
-        System.out.println(willSend);
+       // System.out.println(willSend);
         
         try {
             fileWriter = new FileWriter("passDats.txt", true);
@@ -218,7 +218,7 @@ public class Fourfra extends javax.swing.JFrame {
         
         
         a.add(MFCal.encode(firTex));
-        System.out.println(a.get(0));
+        //System.out.println(a.get(0));
         try {
             MFCal.deleteFromFiles("passDats.txt", a);
         } catch (IOException ex) {

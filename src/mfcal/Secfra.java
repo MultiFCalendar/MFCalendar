@@ -40,7 +40,7 @@ public class Secfra extends javax.swing.JFrame {
         this.buttons = new javax.swing.JButton[37];
 
         MyCalendar mcal = new MyCalendar();
-           System.out.print("deneme");
+
         this.month = month;
         this.year = year;
         try{
@@ -50,12 +50,7 @@ public class Secfra extends javax.swing.JFrame {
             System.exit(1);
         }    
 
-        if(holidays!=null){
-        for(int bb = 0 ; bb< holidays.size();++bb)
-        {
-            System.out.print(holidays.get(bb));
-        }
-        }
+
         monthsOfYear[0] = "OCAK";
         monthsOfYear[1] = "ŞUBAT";
         monthsOfYear[2] = "MART";
