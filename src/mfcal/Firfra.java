@@ -5,6 +5,7 @@
  */
 package mfcal;
 
+import java.awt.event.KeyEvent;
 import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -61,10 +62,23 @@ public class Firfra extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        jButton1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButton1KeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jButton1KeyReleased(evt);
+            }
+        });
 
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordField1ActionPerformed(evt);
+            }
+        });
+        jPasswordField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jPasswordField1KeyPressed(evt);
             }
         });
 
@@ -126,6 +140,66 @@ public class Firfra extends javax.swing.JFrame {
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordField1ActionPerformed
+
+    private void jButton1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton1KeyPressed
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            System.err.println("ksdflksdflksldfdsjkflds");
+            MFCal calendar = new MFCal();
+            try {
+                if( jPasswordField1.getText().compareTo(calendar.getPass("password.txt")) != 0)
+                    System.out.println("Wrong Password!");
+                else{
+                    Secfra x = new Secfra(MFCal.getCurrentMonth(),MFCal.getCurrentYear());
+
+                    x.setLocation(this.getLocation());
+                    x.setVisible(true);
+                    this.dispose();
+                }
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(Firfra.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_jButton1KeyPressed
+
+    private void jButton1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton1KeyReleased
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            MFCal calendar = new MFCal();
+            try {
+                if( jPasswordField1.getText().compareTo(calendar.getPass("password.txt")) != 0)
+                    System.out.println("Wrong Password!");
+                else{
+                    Secfra x = new Secfra(MFCal.getCurrentMonth(),MFCal.getCurrentYear());
+
+                    x.setLocation(this.getLocation());
+                    x.setVisible(true);
+                    this.dispose();
+                }
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(Firfra.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_jButton1KeyReleased
+
+    private void jPasswordField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyPressed
+        // TODO add your handling code here:
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            System.err.println("ksdflksdflksldfdsjkflds");
+            MFCal calendar = new MFCal();
+            try {
+                if( jPasswordField1.getText().compareTo(calendar.getPass("password.txt")) != 0)
+                    System.out.println("Wrong Password!");
+                else{
+                    Secfra x = new Secfra(MFCal.getCurrentMonth(),MFCal.getCurrentYear());
+
+                    x.setLocation(this.getLocation());
+                    x.setVisible(true);
+                    this.dispose();
+                }
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(Firfra.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_jPasswordField1KeyPressed
 
     /**
      * @param args the command line arguments

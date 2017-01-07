@@ -5,6 +5,7 @@
  */
 package mfcal;
 
+import com.sun.glass.events.KeyEvent;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -89,10 +90,20 @@ public class Fiffra extends javax.swing.JFrame {
                 jTextField1ActionPerformed(evt);
             }
         });
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextField1KeyPressed(evt);
+            }
+        });
 
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
+            }
+        });
+        jTextField2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextField2KeyPressed(evt);
             }
         });
 
@@ -311,6 +322,81 @@ public class Fiffra extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jTextField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyPressed
+
+    }//GEN-LAST:event_jTextField1KeyPressed
+
+    private void jTextField2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyPressed
+        
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            String firTex = this.day + "/" + this.month + "/" + this.year + " Hour :" + this.hour + "é";
+
+            String file = jTextField1.getText();
+            String link = jTextField2.getText();
+
+            if (file.length() == 0 || link.length() == 0) {
+                return;
+            }
+            int counter = 0;
+            int counter2 = 0;
+            for (int i = 0; i < file.length(); ++i) {
+                if (file.charAt(i) == ' ' || file.charAt(i) == '\t') {
+                    ++counter;
+                }
+            }
+            for (int j = 0; j < link.length(); ++j) {
+                if (link.charAt(j) == ' ' || link.charAt(j) == '\t') {
+                    ++counter2;
+                }
+            }
+            if (counter == file.length() || counter2 == link.length()) {
+                return;
+            }
+
+            firTex += file;
+
+            firTex += "#";
+
+            firTex += link;
+
+            String willSend = new String();
+
+            FileWriter fileWriter = null;
+
+            willSend += MFCal.encode(firTex) + "\r\n";
+
+            try {
+                fileWriter = new FileWriter("acDats.txt", true);
+            } catch (IOException ex) {
+                Logger.getLogger(Fourfra.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            BufferedWriter bufferWritter = new BufferedWriter(fileWriter);
+            try {
+                bufferWritter.append(willSend);
+
+            } catch (IOException ex) {
+                Logger.getLogger(Fourfra.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            try {
+                bufferWritter.close();
+            } catch (IOException ex) {
+                Logger.getLogger(Fourfra.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            Thfra x = null;
+            try {
+                x = new Thfra(day, month, year);
+            } catch (IOException ex) {
+                Logger.getLogger(Fourfra.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            x.setLocation(this.getLocation());
+            x.setVisible(true);
+            this.dispose();
+        }
+    }//GEN-LAST:event_jTextField2KeyPressed
+
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
