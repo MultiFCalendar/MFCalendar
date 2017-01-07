@@ -159,6 +159,16 @@ public class Fourfra extends javax.swing.JFrame {
         String text = jTextArea1.getText();
         String willSend = new String();
 
+        if(text.length() == 0)
+            return;
+        int counter = 0;
+        for(int i = 0 ; i < text.length() ; ++i)
+            if(text.charAt(i) == ' ' || text.charAt(i) == '\t')
+                ++counter;
+        
+        if(counter == text.length())
+            return;
+
         FileWriter fileWriter = null;
 
         firTex += text;
@@ -213,6 +223,15 @@ public class Fourfra extends javax.swing.JFrame {
             Logger.getLogger(Fourfra.class.getName()).log(Level.SEVERE, null, ex);
         }
         jTextArea1.setText("");
+        Thfra x = null;
+        try {
+            x = new Thfra(day, month, year);
+        } catch (IOException ex) {
+            Logger.getLogger(Fourfra.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        x.setLocation(this.getLocation());
+        x.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
 
