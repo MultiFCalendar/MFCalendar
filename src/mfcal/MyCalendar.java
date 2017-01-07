@@ -52,18 +52,20 @@ public class MyCalendar{
 
         Calendar temp = new GregorianCalendar(year,nextMonth-1,1);
         String ret = new String();
-
-        if(df.format(temp.getTime()).equals("Pazartesi"))
+       /* System.out.println("----------------");
+        System.out.println(df.format(temp.getTime()));
+        System.out.println("----------------");*/
+        if(df.format(temp.getTime()).equals("Pazartesi") || df.format(temp.getTime()).equals("Monday"))
             ret = "1";
-        else if(df.format(temp.getTime()).equals("Salı"))
+        else if(df.format(temp.getTime()).equals("Salı") || df.format(temp.getTime()).equals("Tuesday") )
             ret = "2";
-        else if(df.format(temp.getTime()).equals("Çarşamba"))
+        else if(df.format(temp.getTime()).equals("Çarşamba") || df.format(temp.getTime()).equals("Wednesday"))
             ret = "3";
-        else if(df.format(temp.getTime()).equals("Perşembe"))
+        else if(df.format(temp.getTime()).equals("Perşembe") || df.format(temp.getTime()).equals("Thursday"))
             ret = "4";
-        else if(df.format(temp.getTime()).equals("Cuma"))
+        else if(df.format(temp.getTime()).equals("Cuma") || df.format(temp.getTime()).equals("Friday") )
             ret = "5";
-        else if(df.format(temp.getTime()).equals("Cumartesi"))
+        else if(df.format(temp.getTime()).equals("Cumartesi") && df.format(temp.getTime()).equals("Saturday")  )
             ret = "6";
         else
             ret = "7";
