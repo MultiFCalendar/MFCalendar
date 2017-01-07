@@ -48,7 +48,7 @@ public class Secfrafirst extends javax.swing.JFrame {
         setResizable(false);
 
         jButton2.setBackground(javax.swing.UIManager.getDefaults().getColor("InternalFrame.inactiveTitleBackground"));
-        jButton2.setLabel("OCAK");
+        jButton2.setLabel("JANUARY");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -56,7 +56,7 @@ public class Secfrafirst extends javax.swing.JFrame {
         });
 
         jButton4.setBackground(javax.swing.UIManager.getDefaults().getColor("InternalFrame.inactiveTitleBackground"));
-        jButton4.setText("ŞUBAT");
+        jButton4.setText("FEBRUARY");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -64,7 +64,7 @@ public class Secfrafirst extends javax.swing.JFrame {
         });
 
         jButton5.setBackground(javax.swing.UIManager.getDefaults().getColor("InternalFrame.inactiveTitleBackground"));
-        jButton5.setText("MART");
+        jButton5.setText("MARCH");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -72,7 +72,7 @@ public class Secfrafirst extends javax.swing.JFrame {
         });
 
         jButton6.setBackground(javax.swing.UIManager.getDefaults().getColor("InternalFrame.inactiveTitleBackground"));
-        jButton6.setText("NİSAN");
+        jButton6.setText("APRIL");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -80,7 +80,7 @@ public class Secfrafirst extends javax.swing.JFrame {
         });
 
         jButton7.setBackground(javax.swing.UIManager.getDefaults().getColor("InternalFrame.inactiveTitleBackground"));
-        jButton7.setText("MAYIS");
+        jButton7.setText("MAY");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
@@ -88,7 +88,7 @@ public class Secfrafirst extends javax.swing.JFrame {
         });
 
         jButton8.setBackground(javax.swing.UIManager.getDefaults().getColor("InternalFrame.inactiveTitleBackground"));
-        jButton8.setText("HAZİRAN");
+        jButton8.setText("JUNE");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
@@ -96,7 +96,7 @@ public class Secfrafirst extends javax.swing.JFrame {
         });
 
         jButton9.setBackground(javax.swing.UIManager.getDefaults().getColor("InternalFrame.inactiveTitleBackground"));
-        jButton9.setText("TEMMUZ");
+        jButton9.setText("JULY");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
@@ -104,7 +104,7 @@ public class Secfrafirst extends javax.swing.JFrame {
         });
 
         jButton10.setBackground(javax.swing.UIManager.getDefaults().getColor("InternalFrame.inactiveTitleBackground"));
-        jButton10.setText("AĞUSTOS");
+        jButton10.setText("AUGUST");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton10ActionPerformed(evt);
@@ -112,7 +112,7 @@ public class Secfrafirst extends javax.swing.JFrame {
         });
 
         jButton11.setBackground(javax.swing.UIManager.getDefaults().getColor("InternalFrame.inactiveTitleBackground"));
-        jButton11.setText("EYLÜL");
+        jButton11.setText("SEPTEMBER");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton11ActionPerformed(evt);
@@ -120,7 +120,7 @@ public class Secfrafirst extends javax.swing.JFrame {
         });
 
         jButton12.setBackground(javax.swing.UIManager.getDefaults().getColor("InternalFrame.inactiveTitleBackground"));
-        jButton12.setText("EKİM");
+        jButton12.setText("OCTOBER");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton12ActionPerformed(evt);
@@ -128,7 +128,7 @@ public class Secfrafirst extends javax.swing.JFrame {
         });
 
         jButton13.setBackground(javax.swing.UIManager.getDefaults().getColor("InternalFrame.inactiveTitleBackground"));
-        jButton13.setText("KASIM");
+        jButton13.setText("NOVEMBER");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton13ActionPerformed(evt);
@@ -136,7 +136,7 @@ public class Secfrafirst extends javax.swing.JFrame {
         });
 
         jButton14.setBackground(javax.swing.UIManager.getDefaults().getColor("InternalFrame.inactiveTitleBackground"));
-        jButton14.setText("ARALIK");
+        jButton14.setText("DECEMBER");
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton14ActionPerformed(evt);
