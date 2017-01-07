@@ -55,11 +55,11 @@ public class MyCalendar{
 
         if(df.format(temp.getTime()).equals("Pazartesi"))
             ret = "1";
-        else if(df.format(temp.getTime()).equals("Sal˝"))
+        else if(df.format(temp.getTime()).equals("Salı"))
             ret = "2";
-        else if(df.format(temp.getTime()).equals("«ar˛amba"))
+        else if(df.format(temp.getTime()).equals("Çarşamba"))
             ret = "3";
-        else if(df.format(temp.getTime()).equals("Per˛embe"))
+        else if(df.format(temp.getTime()).equals("Perşembe"))
             ret = "4";
         else if(df.format(temp.getTime()).equals("Cuma"))
             ret = "5";
