@@ -143,7 +143,6 @@ public class Firfra extends javax.swing.JFrame {
 
     private void jButton1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton1KeyPressed
         if(evt.getKeyCode() == KeyEvent.VK_ENTER){
-            System.err.println("ksdflksdflksldfdsjkflds");
             MFCal calendar = new MFCal();
             try {
                 if( jPasswordField1.getText().compareTo(calendar.getPass("password.txt")) != 0)
@@ -183,7 +182,6 @@ public class Firfra extends javax.swing.JFrame {
     private void jPasswordField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyPressed
         // TODO add your handling code here:
         if(evt.getKeyCode() == KeyEvent.VK_ENTER){
-            System.err.println("ksdflksdflksldfdsjkflds");
             MFCal calendar = new MFCal();
             try {
                 if( jPasswordField1.getText().compareTo(calendar.getPass("password.txt")) != 0)
