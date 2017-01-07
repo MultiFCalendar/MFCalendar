@@ -98,7 +98,7 @@ public class Fourfra extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("Remove TODO");
+        jButton3.setText("Remove");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);

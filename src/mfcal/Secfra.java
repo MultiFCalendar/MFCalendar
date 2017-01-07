@@ -51,18 +51,18 @@ public class Secfra extends javax.swing.JFrame {
         }    
 
 
-        monthsOfYear[0] = "OCAK";
-        monthsOfYear[1] = "ŞUBAT";
-        monthsOfYear[2] = "MART";
-        monthsOfYear[3] = "NİSAN";
-        monthsOfYear[4] = "MAYIS";
-        monthsOfYear[5] = "HAZİRAN";
-        monthsOfYear[6] = "TEMMUZ";
-        monthsOfYear[7] = "AĞUSTOS";
-        monthsOfYear[8] = "EYLÜL";
-        monthsOfYear[9] = "EKİM";
-        monthsOfYear[10] = "KASIM";
-        monthsOfYear[11] = "ARALIK";
+        monthsOfYear[0] = "JANUARY";
+        monthsOfYear[1] = "FEBRUARY";
+        monthsOfYear[2] = "MARCH";
+        monthsOfYear[3] = "APRIL";
+        monthsOfYear[4] = "MAY";
+        monthsOfYear[5] = "JUNE";
+        monthsOfYear[6] = "JULY";
+        monthsOfYear[7] = "AUGUST";
+        monthsOfYear[8] = "SEPTEMBER";
+        monthsOfYear[9] = "OCTOBER";
+        monthsOfYear[10] = "NOVEMBER";
+        monthsOfYear[11] = "DECEMBER";
 
         buttons[0] = jButton36;
         buttons[1] = jButton37;
@@ -140,7 +140,7 @@ public class Secfra extends javax.swing.JFrame {
                 
         }
 
-        jLabel8.setText("Bugün :   " + MFCal.getCurrentDay() + " " + monthsOfYear[MFCal.getCurrentMonth() - 1] + " " + MFCal.getCurrentYear());
+        jLabel8.setText("Today :   " + MFCal.getCurrentDay() + " " + monthsOfYear[MFCal.getCurrentMonth() - 1] + " " + MFCal.getCurrentYear());
         jLabel10.setText(monthsOfYear[month - 1] + " " + year);
 
     }
@@ -202,19 +202,19 @@ public class Secfra extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        jLabel3.setText("Car");
+        jLabel3.setText("Wed");
 
-        jLabel4.setText("Per");
+        jLabel4.setText("Thu");
 
-        jLabel5.setText("Cum");
+        jLabel5.setText("Fri");
 
-        jLabel6.setText("Cts");
+        jLabel6.setText("Sat");
 
-        jLabel7.setText("Paz");
+        jLabel7.setText("Sun");
 
-        jLabel1.setText("Pts");
+        jLabel1.setText("Mon");
 
-        jLabel2.setText("Sal");
+        jLabel2.setText("Tue");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -226,7 +226,7 @@ public class Secfra extends javax.swing.JFrame {
                 .addGap(48, 48, 48)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39)
