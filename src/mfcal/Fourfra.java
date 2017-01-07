@@ -50,6 +50,7 @@ public class Fourfra extends javax.swing.JFrame {
             String[] splitStr = MFCal.decode(line).split("é");
             if (splitStr[0].equals(jLabel1.getText())) {
                 jTextArea1.setText(splitStr[1]);
+                jButton2.setVisible(false);
             }
 
         }
