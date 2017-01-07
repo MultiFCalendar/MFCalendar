@@ -54,6 +54,7 @@ public class Secfra extends javax.swing.JFrame {
         monthsOfYear[4] = "MAYIS";
         monthsOfYear[5] = "HAZİRAN";
         monthsOfYear[6] = "TEMMUZ";
+
         monthsOfYear[7] = "AĞUSTOS";
         monthsOfYear[8] = "EYLÜL";
         monthsOfYear[9] = "EKİM";
@@ -116,6 +117,8 @@ public class Secfra extends javax.swing.JFrame {
             }
             if(var==true)
                 buttons[i].setBackground(Color.yellow);
+            if(month == 1)
+                buttons[startBut].setBackground(Color.yellow);
         }
 
         jLabel8.setText("Bugün :   " + MFCal.getCurrentDay() + " " + monthsOfYear[MFCal.getCurrentMonth() - 1] + " " + MFCal.getCurrentYear());
