@@ -127,7 +127,7 @@ public class MFCal {
         MyCalendar mcal = new MyCalendar();
         ArrayList<String> willDel = new ArrayList<String>();
         Calendar rightNow = Calendar.getInstance();
-        int hourToday = rightNow.get(Calendar.HOUR_OF_DAY);
+        int hourToday = rightNow.get(Calendar.HOUR_OF_DAY)+1;
         FileReader fileReader = new FileReader(new File("acDats.txt"));
         BufferedReader br = new BufferedReader(fileReader);
 
