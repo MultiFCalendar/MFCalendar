@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -249,6 +250,205 @@ public class Thfra extends javax.swing.JFrame {
         }
         br2.close();
 
+         Calendar rightNow = Calendar.getInstance();
+        int hourToday = rightNow.get(Calendar.HOUR_OF_DAY) + 1;
+        
+        //if active job is disable
+        if(day == MFCal.getCurrentDay() && hourToday >= 0){
+            jButton91.setBackground(Color.GRAY);
+            jButton91.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 1){
+            jButton77.setBackground(Color.GRAY);
+            jButton77.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 2){
+            jButton90.setBackground(Color.GRAY);
+            jButton90.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 3){
+            jButton84.setBackground(Color.GRAY);
+            jButton84.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 4){
+            jButton83.setBackground(Color.GRAY);
+            jButton83.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 5){
+            jButton82.setBackground(Color.GRAY);
+            jButton82.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 6){
+            jButton96.setBackground(Color.GRAY);
+            jButton96.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 7){
+            jButton74.setBackground(Color.GRAY);
+            jButton74.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 8){
+            jButton78.setBackground(Color.GRAY);
+            jButton78.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 9){
+            jButton89.setBackground(Color.GRAY);
+            jButton89.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 10){
+            jButton94.setBackground(Color.GRAY);
+            jButton94.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 11){
+            jButton73.setBackground(Color.GRAY);
+            jButton73.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 12){
+            jButton75.setBackground(Color.GRAY);
+            jButton75.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 13){
+            jButton87.setBackground(Color.GRAY);
+            jButton87.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 14){
+            jButton86.setBackground(Color.GRAY);
+            jButton86.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 15){
+            jButton79.setBackground(Color.GRAY);
+            jButton79.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 16){
+            jButton88.setBackground(Color.GRAY);
+            jButton88.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 17){
+            jButton93.setBackground(Color.GRAY);
+            jButton93.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 18){
+            jButton92.setBackground(Color.GRAY);
+            jButton92.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 19){
+            jButton81.setBackground(Color.GRAY);
+            jButton81.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 20){
+            jButton85.setBackground(Color.GRAY);
+            jButton85.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 21){
+            jButton76.setBackground(Color.GRAY);
+            jButton76.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 22){
+            jButton95.setBackground(Color.GRAY);
+            jButton95.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 23){
+            jButton80.setBackground(Color.GRAY);
+            jButton80.setEnabled(false);
+        }
+
+        //if pasive job is disable
+        if(day == MFCal.getCurrentDay() && hourToday >= 0){
+            jButton1.setBackground(Color.GRAY);
+            jButton1.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 1){
+            jButton2.setBackground(Color.GRAY);
+            jButton2.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 2){
+            jButton3.setBackground(Color.GRAY);
+            jButton3.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 3){
+            jButton4.setBackground(Color.GRAY);
+            jButton4.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 4){
+            jButton5.setBackground(Color.GRAY);
+            jButton5.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 5){
+            jButton6.setBackground(Color.GRAY);
+            jButton6.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 6){
+            jButton7.setBackground(Color.GRAY);
+            jButton7.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 7){
+            jButton8.setBackground(Color.GRAY);
+            jButton8.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 8){
+            jButton9.setBackground(Color.GRAY);
+            jButton9.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 9){
+            jButton10.setBackground(Color.GRAY);
+            jButton10.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 10){
+            jButton11.setBackground(Color.GRAY);
+            jButton11.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 11){
+            jButton12.setBackground(Color.GRAY);
+            jButton12.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 12){
+            jButton13.setBackground(Color.GRAY);
+            jButton13.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 13){
+            jButton14.setBackground(Color.GRAY);
+            jButton14.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 14){
+            jButton15.setBackground(Color.GRAY);
+            jButton15.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 15){
+            jButton16.setBackground(Color.GRAY);
+            jButton16.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 16){
+            jButton17.setBackground(Color.GRAY);
+            jButton17.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 17){
+            jButton18.setBackground(Color.GRAY);
+            jButton18.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 18){
+            jButton19.setBackground(Color.GRAY);
+            jButton19.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 19){
+            jButton20.setBackground(Color.GRAY);
+            jButton20.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 20){
+            jButton21.setBackground(Color.GRAY);
+            jButton21.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 21){
+            jButton22.setBackground(Color.GRAY);
+            jButton22.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 22){
+            jButton23.setBackground(Color.GRAY);
+            jButton23.setEnabled(false);
+        }
+        if(day == MFCal.getCurrentDay() && hourToday >= 23){
+            jButton24.setBackground(Color.GRAY);
+            jButton24.setEnabled(false);
+        }
+        
     }
 
     /**
